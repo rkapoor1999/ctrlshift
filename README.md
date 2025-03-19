@@ -97,7 +97,7 @@ This project is open-source and available under the MIT License.
 ---
 
 ## 📩 Contact
-For questions or contributions, reach out via [your contact info].
+For questions or contributions, reach out via agage5@asu.edu.
 
 ---
 
