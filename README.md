@@ -61,16 +61,10 @@ Ensure you have Python 3 installed, then install the required packages:
 pip install -r requirements.txt
 ```
 
-### **3️⃣ Edit `trend_data.py`**
-Open the file `trend_data.py` and **change the keyword** inside the script:
-```python
-keywords = ["nike dunks"]  # <-- Change this to any keyword you want to analyze
-```
-
-### **4️⃣ Run the Script**
+### **4️⃣ Run the Script with a keyword**
 Execute the script in the terminal:
 ```sh
-python3 backend/trend_data.py
+python3 backend/trend_data.py "nike dunks" # replace "nike dunks" with whatever keyword you want to search for
 ```
 
 ### **5️⃣ View the Output**
