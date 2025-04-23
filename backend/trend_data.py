@@ -1,11 +1,9 @@
-from pytrends.request import TrendReq
+import argparse
 import time
+from pytrends.request import TrendReq
 
 
-def fetch_trends():
-    # The user must manually edit this keyword!
-    keywords = ["nike dunks"]  # <--- Change this manually
-    
+def fetch_trends(keywords):
     # Initialize pytrends and set the timeframe to 1 year
     pytrends = TrendReq(hl='en-US', tz=360)
 
@@ -22,9 +20,12 @@ def fetch_trends():
     return data
 
 
-# Example usage
 if __name__ == "__main__":
-    trends_data = fetch_trends()
+    parser = argparse.ArgumentParser(description="Fetch Google Trends data for given keywords.")
+    parser.add_argument("keywords", nargs="+", help="Keyword(s) to fetch trends for")
+    args = parser.parse_args()
+
+    trends_data = fetch_trends(args.keywords)
 
     if trends_data.empty:
         print("No data found.")
